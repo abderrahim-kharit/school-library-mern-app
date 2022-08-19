@@ -2,7 +2,7 @@ import axios from "axios";
 
 const JWT = localStorage.getItem("token") || "";
 const axiosAdmin = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: process.env.REACT_APP_SERVER_URL,
   headers: {
     Authorization: `Bearer ${JWT}`,
   },

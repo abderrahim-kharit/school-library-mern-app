@@ -1,12 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
-const PORT = process.env.PORT;
-const MONGO_URI = process.env.MONGO_URI;
 const app = express();
 const cors = require("cors");
 const errorHandler = require("./middlewares/errorHandler");
-const notFound = require(".//middlewares/notFound");
+const notFound = require("./middlewares/notFound");
 const { auth, login } = require("./middlewares/authentication");
 
 const { getBookByISBN } = require("./controllers/book");
@@ -33,9 +31,11 @@ app.use(errorHandler);
 //DB Connection
 
 const connectDB = function () {
+  const PORT = process.env.PORT || 5000;
+  const MONGO_URI = process.env.MONGO_URI;
   try {
     mongoose.connect(MONGO_URI);
-    app.listen(PORT, console.log(`LISTENING TO PORT ${PORT}`));
+    app.listen(PORT, console.log(`LISTENING TO PORT ${PORT}..`));
   } catch (error) {
     console.error(error);
   }
