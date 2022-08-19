@@ -5,6 +5,7 @@ import {
   Route,
   Outlet,
 } from "react-router-dom";
+import axios from "./axios/axiosAdminConfig";
 import { useDispatch, useSelector } from "react-redux";
 import { getBooks } from "./features/book/bookSlice";
 import { getDemandes } from "./features/demandes/demandeSlice";
@@ -27,6 +28,7 @@ import {
 } from "./components/Demandes/";
 
 function App() {
+  console.log(axios);
   const dispatch = useDispatch();
 
   const { isLogin } = useSelector((store) => store.user);
