@@ -1,0 +1,20 @@
+button,
+select,
+input {
+  box-shadow: none !important;
+}
+.navbar a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: #eee;
+  color: #212529;
+}
+.navbar a:first-child {
+  margin: 0 0.5rem 0.5rem 0;
+}
+.navbar .active {
+  background-color: #0d6efd;
+  color: white;
+}
