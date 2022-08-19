@@ -28,7 +28,6 @@ import {
 } from "./components/Demandes/";
 
 function App() {
-  console.log(axios);
   const dispatch = useDispatch();
 
   const { isLogin } = useSelector((store) => store.user);
