@@ -5,7 +5,6 @@ import {
   Route,
   Outlet,
 } from "react-router-dom";
-import axios from "./axios/axiosAdminConfig";
 import { useDispatch, useSelector } from "react-redux";
 import { getBooks } from "./features/book/bookSlice";
 import { getDemandes } from "./features/demandes/demandeSlice";
